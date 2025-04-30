@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="icon" href="pngtree-gentle-flower-bouquet-blossom-with-abstract-art-watercolor-paint-splash-illustration-png-image_12447011.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+ <style>
+     body {
+    background: rgb(115, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.invitation {
+    position: relative;
+    text-align: center;
+    cursor: vertical-text;
+}
+
+.card {
+    width: 400px;
+    height: 600px;
+    background: #EBE0CB;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 12PX GREY;
+}
+
+.left-door, .right-door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(252, 172, 24),rgb(252, 188, 71),wheat);
+    transition: transform 1s ease;
+    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+                inset 0 0 12px rgb(250, 188, 71);
+}
+
+.left-door {
+    left: 0;
+    transform-origin: left;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.right-door {
+    right: 0;
+    transform-origin: right;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+    .content {
+        color: #a93c49;
+        z-index: 1;
+        padding: 30px;
+        margin-top: 30px;
+        text-align: center;
+        font-family: "Marck Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+        border-radius: 15px;
+    }
+    .content h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color:#db0808;
+        font-family: "Pinyon Script", cursive;
+    }
+    .content h3, .content h4, .content h5, .content h2 {
+        margin: 10px 0;
+        color: #fc6a04;
+        font-size: 18PX;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .content h2 {
+        font-size: 17px;
+        color: #a30101;
+        -webkit-text-stroke: 0.3px #a30101;
+    }
+
+.ribbon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    pointer-events: none;
+    transition: 500ms ease-in-out;
+    filter: drop-shadow(0 0 10px gold);
+}
+
+
+    </style>
+<div class="invitation">
+    <div class="card" id="card">
+        <img src="bow_PNG100696.png" alt="Ribbon Bow" class="ribbon" id="ribbon" > <!-- Ribbon bow added -->
+        <div class="left-door"></div>
+        <div class="content">
+        <h1>You're Invited to the Heartfelt Farewell!</h1>
+        <h3 style="text-align: start; margin-top: 20px; font-weight: 200px; text-decoration: underline;">Dear Seniors,</h3>
+        <h4>As we bid adieu to our beloved seniors, let's gather together to share smiles, memories, and good wishes for the journey ahead.</h4>
+        <h5 style="margin-top: 20px;">Event : Farewell Celebration Class of 2025</h5>
+        <h2>Date : 30-05-2025</h2>
+        <h2>Time : 2.00 - 4.30</h2>
+        <h2>Venue : F101</h2>
+        <h4 style="margin-top: 20px;">Dress Code : Anything comfortable</h4>
+        <!-- <img src="top.png" alt="" width="300px" style="position: absolute; top: -100px; left: 50px;"> -->
+        <!-- <img src="top.png" alt="" width="200px" style="position: absolute; bottom: -40px; left: 100px;"> -->
+        <!-- <img src="red-floral-border-with-greenery-leaves-watercolor-free-png.webp" alt="" width="160px" style="position: absolute; bottom: 0; left:120px ;"> -->
+        <img src="bg.png" alt="" width="415px" style="position: absolute; top: -10px; left: -7px;">
+        </div>
+        <div class="right-door"></div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+<script>
+const card = document.getElementById('card');
+const leftDoor = document.querySelector('.left-door');
+const rightDoor = document.querySelector('.right-door');
+const ribbon = document.getElementById('ribbon');
+let isOpen = false;
+
+card.addEventListener('click', () => {
+    if (!isOpen) {
+        leftDoor.style.transform = 'rotateY(-90deg)';
+        rightDoor.style.transform = 'rotateY(90deg)';
+        ribbon.style.opacity = '0'; // Hide bow when open
+    } else {
+        leftDoor.style.transform = 'rotateY(0)';
+        rightDoor.style.transform = 'rotateY(0)';
+        ribbon.style.opacity = '1'; // Show bow when closed
+    }
+    isOpen = !isOpen;
+});
+
+
+
+
+</script>
+</body>
+</html>
